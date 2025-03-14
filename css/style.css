@@ -7,11 +7,12 @@
     font-family: "Poppins", sans-serif;
 }
 
-body{
+body {
     height: 100vh;
-    background: url("background.jpg") no-repeat / cover;
+    background: url("../images/background.png") no-repeat / cover;
     padding: 50px 5%;
 }
+
 
 .container {
     position: relative;
@@ -32,7 +33,6 @@ header{
     align-items: center;
     z-index: 100;
 }
-
 
 .logo{
     font-size: 25px;
