@@ -9,36 +9,55 @@
 
 body {
     height: 100vh;
-    background: url("../images/background.png") no-repeat / cover;
+    background: url("../images/background.png") no-repeat center center fixed;
+    background-size: cover;
     padding: 50px 5%;
 }
-
 
 .container {
     position: relative;
     height: 100%;
-    background-color: seagreen;
+    background: rgba(255, 255, 255, .1);
+    border: 2px solid rgba(255, 255, 255, .2);
     border-radius: 30px;
+    backdrop-filter: blur(30px);
+    transform: scale(0);
+    animation: zoom-in 1s ease forwards; /* L'animazione parte qui */
 }
 
-header{
+@keyframes zoom-in {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+header {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     padding: 25px 5%;
-    background-color: slateblue;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
 }
 
-.logo{
+.logo {
     font-size: 25px;
     color: white;
     text-decoration: none;
     font-weight: 600;
+}
+
+.navbar {
+    display: flex;
+    gap: 20px; /* Aggiunge spazio tra i link */
 }
 
 .navbar a {
@@ -46,4 +65,66 @@ header{
     color: white;
     text-decoration: none;
     font-weight: 500;
+    border-bottom: 2px solid transparent;
+    transition: .5s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    border-color: white;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: 50px;
+    padding: 50px 5% 0;
+    color: white;
+}
+
+.home-detail h1 {
+    font-size: 55px;
+    line-height: 1;
+}
+
+.home-detail h2 {
+    font-size: 32px;
+}
+
+.download-cv {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 40px;
+    box-shadow: 0 0 10px white;
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.download-cv:hover {
+    background: transparent;
+    box-shadow: none;
+    color: white;
+}
+
+.home-img .img-box {
+    position: relative;
+    width: 28vw;
+    height: 28vw;
+    border: 2px solid white;
+    border-radius: 50%;
+    box-shadow: 0 0 20px white;
+    overflow: hidden;
+}
+
+.home-img .img-box img {
+    position: absolute;
+    display: block;
+    bottom: 2px;
+    width: 100%;
+    object-fit: cover;
 }
