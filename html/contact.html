@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - P-Dantonio</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <a href="index.html" class="logo">Portfolio.</a>
+            <nav class="navbar">
+                <a href="../index.html">Home</a>
+                <a href="../html/contact.html" class="active">About</a>
+                <a href="../html/portafolio.html">Portfolio</a>
+                <a href="services.html">Service</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </header>
+
+        <section class="contact">
+            <h1>Contattami</h1>
+            <form action="invia_email.php" method="POST">
+                <div class="form-row">
+                    <input type="text" name="first-name" placeholder="Nome" required>
+                    <input type="text" name="last-name" placeholder="Cognome" required>
+                </div>
+                <input type="email" name="email" placeholder="Email" required>
+                <textarea name="message" placeholder="Il tuo messaggio" required></textarea>
+                <input type="tel" name="phone" placeholder="Numero di telefono" required>
+                <button type="submit">Invia</button>
+            </form>
+        </section>
+    </div>
+</body>
+
+</html>
